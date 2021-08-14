@@ -8,7 +8,8 @@
   },
   "scripts": {
     "build": "tsc",
-    "test": "jest --collect-coverage"
+    "test": "jest --collect-coverage",
+    "prepublish": "npm run build"
   },
   "devDependencies": {
     "@types/express": "^4.17.13",
