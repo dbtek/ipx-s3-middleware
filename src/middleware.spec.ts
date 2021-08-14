@@ -1,7 +1,7 @@
 import { mocked } from 'ts-jest/utils'
 import * as ipx from 'ipx';
 import { Request, Response, NextFunction } from 'express';
-import { createS3IpxMiddleware } from './middleware';
+import { createIPXS3Middleware } from './middleware';
 
 jest.mock('ipx');
 const mockedIpx = mocked(ipx, true);
@@ -25,16 +25,16 @@ describe('middleware', () => {
     mockResponse = {};
   });
 
-  describe('createS3IpxMiddleware', () => {
+  describe('createIPXS3Middleware', () => {
     it('should call createIpxMiddleware()', () => {
       const _ipx = mockedIpx.createIPX({});
-      createS3IpxMiddleware(_ipx, baseUrl)(mockRequest as Request, mockResponse as Response, nextFunction);
+      createIPXS3Middleware(_ipx, baseUrl)(mockRequest as Request, mockResponse as Response, nextFunction);
       expect(mockedIpx.createIPXMiddleware.mock.calls).toHaveLength(1);
     });
 
     it('should update req.url with s3 base url', () => {
       const _ipx = mockedIpx.createIPX({});
-      createS3IpxMiddleware(_ipx, baseUrl)(mockRequest as Request, mockResponse as Response, nextFunction);
+      createIPXS3Middleware(_ipx, baseUrl)(mockRequest as Request, mockResponse as Response, nextFunction);
       expect(mockedIpxMiddleware).toHaveBeenCalledWith({ url: `/${cmds}/${baseUrl}/${pathToImg}` }, mockResponse);
     });
   });

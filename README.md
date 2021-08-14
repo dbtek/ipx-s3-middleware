@@ -19,14 +19,14 @@ $ yarn add ipx-s3-middleware
 ```js
 const express = require('express');
 const { createIPX } = require('ipx');
-const { createS3IpxMiddleware } = require('ipx-s3-middleware');
+const { createIPXS3Middleware } = require('ipx-s3-middleware');
 
 const s3BaseUrl = 'https://my-bucket.s3.us-west-2.amazonaws.com';
 
 const ipx = createIPX({ domains: [s3BaseUrl] });
 
 const app = express();
-app.use('/images', createS3IpxMiddleware(ipx, s3BaseUrl));
+app.use('/images', createIPXS3Middleware(ipx, s3BaseUrl));
 
 app.listen(3001, () => {
   console.log(`🚀 Image processing service is ready at http://localhost:3000`)
