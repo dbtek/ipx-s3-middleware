@@ -19,7 +19,7 @@ $ yarn add ipx-s3-middleware
 ```js
 const express = require('express');
 const { createIPX } = require('ipx');
-const { createS3IpxMiddleware } = require('../dist/index.js');
+const { createS3IpxMiddleware } = require('ipx-s3-middleware');
 
 const s3BaseUrl = 'https://my-bucket.s3.us-west-2.amazonaws.com';
 
