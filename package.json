@@ -1,7 +1,7 @@
 {
   "name": "ipx-s3-middleware",
   "description": "A simple middleware for IPX which translates given path to full S3 url.",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "main": "dist/middleware.js",
   "directories": {
     "example": "example"
