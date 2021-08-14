@@ -1,0 +1,41 @@
+{
+  "name": "ipx-s3-middleware",
+  "description": "A simple middleware for IPX which translates given path to full S3 url.",
+  "version": "0.1.0",
+  "main": "dist/middleware.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "jest --collect-coverage"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/jest": "^27.0.1",
+    "@types/node": "^16.6.1",
+    "express": "^4.17.1",
+    "ts-jest": "^27.0.4",
+    "typescript": "^4.3.5"
+  },
+  "peerDependencies": {
+    "ipx": "^0.7.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dbtek/ipx-s3-middleware.git"
+  },
+  "keywords": [
+    "ipx",
+    "s3",
+    "aws",
+    "image",
+    "transformation"
+  ],
+  "author": "Ismail Demirbilek <ce.demirbilek@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dbtek/ipx-s3-middleware/issues"
+  },
+  "homepage": "https://github.com/dbtek/ipx-s3-middleware#readme"
+}

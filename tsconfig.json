@@ -1,0 +1,14 @@
+{
+  "include": ["src/**/*"],
+  "exclude": ["src/**/*.spec.ts"],
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "commonjs",
+    "outDir": "dist",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "declaration": true,
+  }
+}
