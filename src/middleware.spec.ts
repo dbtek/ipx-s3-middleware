@@ -1,10 +1,10 @@
-import { mocked } from 'ts-jest/utils'
+import { mocked } from 'jest-mock'
 import * as ipx from 'ipx';
 import { Request, Response, NextFunction } from 'express';
 import { createIPXS3Middleware } from './middleware';
 
 jest.mock('ipx');
-const mockedIpx = mocked(ipx, true);
+const mockedIpx = mocked(ipx);
 const mockedIpxMiddleware = jest.fn();
 
 mockedIpx.createIPXMiddleware.mockImplementation(ipx => mockedIpxMiddleware);
