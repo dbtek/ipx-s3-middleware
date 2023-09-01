@@ -20,7 +20,7 @@
     "typescript": "^5.2.2"
   },
   "peerDependencies": {
-    "ipx": "^0.7.2"
+    "ipx": ">=0.7.2"
   },
   "repository": {
     "type": "git",
